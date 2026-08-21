@@ -8,6 +8,7 @@ def main():
     uvicorn.run(app, host="0.0.0.0", port=8001)
 
 
+
 @app.get("/")
 def read_root():
     return {
@@ -29,6 +30,57 @@ def read_root():
         "ULINT":  18446744073709551615,
         "USINT":  255,
         "WORD":   65535
+    }
+
+@app.get("/intbool")
+def read_intbool():
+        return {
+            "BOOL0": False,
+            "BOOL1": False,
+            "BOOL2": False,
+            "BOOL3": False,
+            "BOOL4": False,
+            "BOOL5": False,
+            "BOOL6": False,
+            "BOOL7": False,
+            "INT0": 10,
+            "INT1": 21,
+            "INT2": 31,
+            "INT3": 41,
+            "INT4": 51,
+            "INT5": 61,
+            "INT6": 71,
+            "INT7": 81
+        }
+
+@app.get("/bool")
+def read_bool():
+    return {
+        "BOOL0": False,
+        "BOOL1": False,
+        "BOOL2": False,
+        "BOOL3": False,
+        "BOOL4": False,
+        "BOOL5": False,
+        "BOOL6": False,
+        "BOOL7": False,
+        "BOOL8": False,
+        "BOOL9": False,
+        "BOOL10": False,
+        "BOOL11": False,
+        "BOOL12": False,
+        "BOOL13": False,
+        "BOOL14": False,
+        "BOOL15": False,
+        "BOOL16": False,
+        "BOOL17": False,
+        "BOOL18": False,
+        "BOOL19": False,
+        "BOOL20": False,
+        "BOOL21": False,
+        "BOOL22": False,
+        "BOOL23": False,
+        "BOOL24": False
     }
 
 if __name__ == "__main__":
